@@ -108,7 +108,8 @@ def browser():
 
     if RunConfig.driver_type == "chrome":
         # 本地chrome浏览器
-        driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+        driver = webdriver.Chrome()
+        # driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         driver.maximize_window()
 
     elif RunConfig.driver_type == "firefox":
